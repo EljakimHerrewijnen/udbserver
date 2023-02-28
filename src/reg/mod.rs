@@ -3,6 +3,7 @@ use unicorn_engine::unicorn_const::{Arch, Mode};
 
 mod arm;
 mod arm64;
+mod riscv32;
 mod m68k;
 mod mips;
 mod ppc;
@@ -30,6 +31,14 @@ impl Register {
         let map = match arch {
             Arch::ARM => &arm::REGMAP,
             Arch::ARM64 => &arm64::REGMAP,
+            Arch::RISCV => {
+                if mode.contains(Mode::MODE_32) {
+                    &riscv32::REGMAP
+                } else {
+                    //UNTESTED!
+                    &riscv32::REGMAP 
+                }
+            },
             Arch::M68K => &m68k::REGMAP,
             Arch::MIPS => &mips::REGMAP,
             Arch::PPC => &ppc::REGMAP,

@@ -1,0 +1,43 @@
+use crate::reg::RegMap;
+use unicorn_engine::RegisterRISCV;
+
+
+pub static REGMAP: RegMap = RegMap {
+    regs: &[
+        (Some(RegisterRISCV::X0 as i32), 8),
+        (Some(RegisterRISCV::X1 as i32), 8),
+        (Some(RegisterRISCV::X2 as i32), 8),
+        (Some(RegisterRISCV::X3 as i32), 8),
+        (Some(RegisterRISCV::X4 as i32), 8),
+        (Some(RegisterRISCV::X5 as i32), 8),
+        (Some(RegisterRISCV::X6 as i32), 8),
+        (Some(RegisterRISCV::X7 as i32), 8),
+        (Some(RegisterRISCV::X8 as i32), 8),
+        (Some(RegisterRISCV::X8 as i32), 8),
+        (Some(RegisterRISCV::X9 as i32), 8),
+        (Some(RegisterRISCV::X10 as i32), 8),
+        (Some(RegisterRISCV::X11 as i32), 8),
+        (Some(RegisterRISCV::X12 as i32), 8),
+        (Some(RegisterRISCV::X13 as i32), 8),
+        (Some(RegisterRISCV::X14 as i32), 8),
+        (Some(RegisterRISCV::X15 as i32), 8),
+        (Some(RegisterRISCV::X16 as i32), 8),
+        (Some(RegisterRISCV::X17 as i32), 8),
+        (Some(RegisterRISCV::X18 as i32), 8),
+        (Some(RegisterRISCV::X19 as i32), 8),
+        (Some(RegisterRISCV::X20 as i32), 8),
+        (Some(RegisterRISCV::X21 as i32), 8),
+        (Some(RegisterRISCV::X22 as i32), 8),
+        (Some(RegisterRISCV::X23 as i32), 8),
+        (Some(RegisterRISCV::X24 as i32), 8),
+        (Some(RegisterRISCV::X25 as i32), 8),
+        (Some(RegisterRISCV::X26 as i32), 8),
+        (Some(RegisterRISCV::X27 as i32), 8),
+        (Some(RegisterRISCV::X28 as i32), 8),
+        (Some(RegisterRISCV::X29 as i32), 8),
+        (Some(RegisterRISCV::X30 as i32), 8),
+        (Some(RegisterRISCV::X31 as i32), 8),
+    ],
+    len: 64,
+    desc: r#"<target version="1.0"><architecture>riscv:rv64</architecture></target>"#,
+};
